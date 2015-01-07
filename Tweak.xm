@@ -103,9 +103,9 @@ if (kIsEnabled) {
 	}
 
     //UIView* wind = MSHookIvar<UIView *>(self, "_foregroundView");
-    SBLockScreenViewController* lockViewController = MSHookIvar<SBLockScreenViewController*>([%c(SBLockScreenManager) sharedInstance], "_lockScreenViewController");
-    SBLockScreenView* lockView = MSHookIvar<SBLockScreenView*>(lockViewController, "_view");
-    wind = MSHookIvar<SBLockScreenScrollView*>(lockView, "_foregroundScrollView");
+    SBLockScreenViewController *lockViewController = MSHookIvar<SBLockScreenViewController*>([%c(SBLockScreenManager) sharedInstance], "_lockScreenViewController");
+    SBLockScreenView *lockView = MSHookIvar<SBLockScreenView*>(lockViewController, "_view");
+    wind = MSHookIvar<SBLockScreenScrollView *>(lockView, "_foregroundScrollView");
 
     [newBack removeFromSuperview];
     [newTime removeFromSuperview];
